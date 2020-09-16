@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/ryanrocket/logibeans#readme",
   "dependencies": {
+    "atob": "^2.1.2",
+    "btoa": "^1.2.1",
     "express": "^4.17.1"
   }
 }
