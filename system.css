@@ -26,6 +26,133 @@ html, body {
 }
 #aplogin {
     text-align: center;
-    font-size: 32px;
+    font-size: 2.6rem;
     color: white;
+}
+.login {
+    height: 8%;
+    padding:20px;
+    width: 40%;
+    font-size: 22px;
+    min-width: 500px;
+}
+.loginB {
+    height: 9%;
+    width: 40%;
+    margin-top:20px;
+    font-size: 20px;
+    border: black 1px solid;
+    background-color: rgb(255, 182, 47);
+    min-width: 500px;
+}
+.nav-link {
+    font-size: 1.7rem!important;
+    color: rgb(228, 228, 228)!important;
+}
+.nav-link:hover {
+    color: rgb(197, 197, 197)!important;
+}
+.navbar-brand:hover {
+    color: rgb(197, 197, 197)!important;
+}
+.navbar-brand {
+    font-size: 1.7rem!important;
+    color: rgb(228, 228, 228)!important;
+    font-weight: 700!important;
+    margin-right: 2.1rem!important;
+}
+.navbar {
+    color: rgb(228, 228, 228)!important;
+}
+.card-holder-ryanwans-end {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 25px;
+    width: 100%;
+    gap: 30px;
+}
+.card-holder-inner-card {
+    background-color: #fff;
+    box-shadow: rgba(0,0,0,.1) 0 3px 15px 0, rgba(0,0,0,.05) 0 1px 3px 0;
+    width: 370px;
+    height: 370px;
+    user-select: none;
+    z-index: 10;
+    position: relative;
+    border-radius: 10px;
+    transition: all .15s ease 0s;
+    text-align: center;
+    border: rgba(0, 0, 0, 0.82) 5px solid;
+    text-decoration: none!important;
+}
+.card-holder-preview {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 36%;
+    background-color: rgba(0, 0, 0, 0.82);
+    z-index: 10;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    float: left;
+    padding: 10px;
+    text-align: left;
+}
+.card-holder-image {
+    max-width: 360px;
+    max-height: 360px;
+    border-radius: 6px;
+    top:0;
+    left:0;
+}
+.pre-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+}
+.pre-desc {
+    color: rgba(158, 158, 158, 0.85);
+    font-size: 20px;
+    font-weight: 400;
+}
+.hover:hover{
+    transform: scale(1.05)
+}
+.locked:hover {
+    animation: shake .82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    opacity: .4!important;
+
+}
+.locked {
+    opacity: .55!important;
+}
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(135deg, #000000ec 25%, #312a01f3 25%, #312a01f3 50%, #000000ec 50%, #000000ec 75%, #312a01f3 75%, #312a01f3 100%);
+    background-size: 56.57px 56.57px;
+    z-index: 999;
+    cursor: pointer;
+}
+#ov-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: #bebebe;
+    transform: translate(-50%,-60%);
+    -ms-transform: translate(-50%,-60%);
+    text-align: center;
+    padding: 10px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }

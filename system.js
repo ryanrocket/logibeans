@@ -1,67 +1,7 @@
-!function() {
-    // default view loader is set to attribute 'rocketload="_target"'
-    console.log('Ryan RocketLoader - v4.0 loaded!');
-    var _page = window.location.pathname.split('/');
-    var _jQuery = (window.jQuery && typeof jQuery !== "undefined") ? true : false;
-    _page=_page[_page.length-1];
-    (_page === "" && typeof _page === "string") ? _page="/" : _page=_page;
-    var _depChartURL = "/api/v1/dependencyChart";
-    var _xhr = new XMLHttpRequest();
-    var _options = {
-        depTimeout: 1100,
-        aftTimeput: 800,
-        tmpAuth: btoa(Date.now()+"XX_8267w37863i478g62346"),
-        tryAsync: false,
-        transferMethod: ['xhr', 'polling', 'fetch'],
-        prior: ['page', 'page-inner', 'extra-dep', '$SETUP_WEBSOCKET', 'finals']
-    };
-    let __hotreplace_keycode__ = "{$__}";
-    let __tempreplace_keycode__ = "%%%";
-    const _inject = (pJson) => {
-        if(pJson.jQuery && _jQuery) {
-            if(typeof pJson.method === "undefined") {
-                $(pJson.target).append(pJson.value);
-            } else if(pJson.method === "replace") {
-                $(pJson.target).html(pJson.value)
-            } else {$(pJson.target).append(pJson.value);}} else {
-            var ident = pJson.target.split("")[0] || "#";
-            if(ident !== '.' || ident !== '#') {ident = "#";}
-            (ident === '#') ? (!function() {
-                var _tar = document.getElementById(pJson.target);
-                var _elm = document.createElement("rocketLoadMain");
-                _elm.innerHTML = pJson.value;
-                _tar.innerHTML = _elm;
-            }()) : (!function() {
-                var _tar = document.getElementsByClassName(pJson.target);
-                var _elm = document.createElement("rocketLoadMain");
-                _elm.innerHTML = pJson.value;
-                _tar.innerHTML = _elm;
-            }())}
-    };
-    window.rocketLoad = function(a,b,c) {
-        if(typeof a !== "number" && a!==1){console.log("Ryan RocketLoader - Loader declined this action");} else {
-            _xhr.onreadystatechange = () => {
-                if(this.readyState === 4 && this.status === 200) {
-                    var output = JSON.parse(this.reponseText);
-                    c('depChart',1,output);
-                } else {console.warn("Ryan RocketLoader - rocketLoad failed dependency fetch");}
-            }
-            _xhr.open('GET', b, 1),_xhr.send();}
-    };
-    window.rlPosXHRScan = (a,b,c) => {
-
-    }
-    if(!_jQuery){console.log('Ryan RocketLoader - jQuery not detected, loading wrap-around');};
-    window.onload = (self) => {
-        _inject({
-            jQuery: true,
-            method: 'replace',
-            target: '#aplogin',
-            value: '<span>Loading content...</span>'
-        });
-        setTimeout(function(main){
-            window.rocketLoad(1, "/api/v1/dependencyChart", window.rlPosXHRScan);
-        }, _options.depTimeout)
-    };
-    console.log('Ryan RocketLoader - Loading dependencies for target '+_page);
-}()
+/*
+ * Ryan RocketLoader v2020.4.10 
+ * MODES: Production, Minified, Optimized
+ * Copyright (c) 2020 Ryan Wans Development. All rights reserved.
+ * Licensed under MIT Software license
+ */
+"use strict";var _WINDOW;!function(){console.log("Ryan RocketLoader - v4.0 loaded!");var _page=window.location.pathname.split("/"),_jQuery=!(!window.jQuery||"undefined"==typeof jQuery);_page=_page[_page.length-1],_page=""===_page&&"string"==typeof _page?"/":_page;var _depChartURL="/api/v1/dependencyChart",_xhr=new XMLHttpRequest,_options={depTimeout:300,aftTimeout:100,tmpAuth:btoa(Date.now()+"XX_8267w37863i478g62346"),tryAsync:!1,transferMethod:["xhr","polling","fetch"],prior:["depChart","depInner","cdnDep","$SETUP_WEBSOCKET","finals"]};console.log("\n\n%c WARNING! \n","background-color:yellow;color: red;font-size:35px;"),console.log("%c\nNever paste unknown or intentional Self-XSS code in this console!\n\n","font-size:24px;"),window.pageNow=_page;let __hotreplace_keycode__="{$__}",__tempreplace_keycode__="%%%";const _inject=e=>{if(e.jQuery&&_jQuery)void 0===e.method?$(e.target).append(e.value):"replace"===e.method?$(e.target).html(e.value):$(e.target).append(e.value);else{var o=e.target.split("")[0]||"#";"."===o&&"#"===o||(o="#"),"#"===o?function(){try{var o=document.getElementById(e.target),t=document.createElement("rocketLoadMain");t.innerHTML=e.value,o.innerHTML=t}catch(e){}}():function(){var o=document.getElementsByClassName(e.target),t=document.createElement("rocketLoadMain");t.innerHTML=e.value,o.innerHTML=t}()}};window.rocketDataHoisting=((e,o)=>{setTimeout(function(){_inject({jQuery:window.rocketHoist.jQuery,method:"replace",target:"#aplogin",value:e})},_options.aftTimeout)}),window.rocketLoad=function(e,o,t,n,a,r){if("number"!=typeof e&&1!==e)console.log("Ryan RocketLoader - Loader declined this action");else{var i=new XMLHttpRequest;i.onreadystatechange=(()=>{if(4===i.readyState&&200===i.status){var e=Date.now();console.log("Ryan RocketLoader - ASYNC LOAD COMPLETED IN "+(e-d)+" MS");var o=i.response;t(a,1,o,n)}}),"json"===r&&(i.responseType=r),i.open("GET",o,1),i.send()}var d=Date.now()},window.rlPosXHRScan=((a,b,c,d)=>{if("string"!=typeof a)return!1;if("depChart"===a){if("object"!=typeof c)return!1;{let e=c[d];window.rocketHoist={jQuery:e.jQuery,locked:e.locked,staffOnly:e.staffOnly,name:e.name,forceAccount:e.forceAccount},window.hoistedHotArray=e.hotreplace_config,e.pageFile.has&&window.rocketLoad(1,e.pageFile.cdn,window.rlPosXHRScan,window.pageNow,"cdnDep","file"),window.rocketHoist.wsSettings=e.websocketEnabled,window.rocketLoad(1,e.getter+d,window.rlPosXHRScan,window.pageNow,"depInner","string")}}else if("depInner"===a)window.hotReplaceOutterExtrapolatedExpansionFunction(__hotreplace_keycode__,"HotRepl_",c,d);else if("cdnDep"===a)try{eval(c),document.body.addEventListener("build",e=>{var taken=Date.now()-e.detail.start;console.log("Ryan RocketLoader - Building event took "+taken+" MS"),eval(window.rocketFunction)},!1)}catch(e){console.warn("Ryan RocketLoader - CDN Script Evaluation Error")}}),window.hotReplaceOutterExtrapolatedExpansionFunction=((e,o,t,n)=>{var a=window.hoistedHotArray,r=a.hotArray.length,i=0;for(i=0;i<r;i++){var d=e.replace("__",o+i);t=t.replace(d,a.hotArray[i])}window.rocketDataHoisting(t,n)}),_jQuery||console.log("Ryan RocketLoader - jQuery not detected, loading wrap-around"),window.onload=(e=>{_inject({jQuery:!0,method:"replace",target:"#aplogin",value:'<div style="margin-top: 50px">Loading content...</div>'}),setTimeout(function(e){window.rocketLoad(1,"/api/v1/dependencyChart",window.rlPosXHRScan,window.pageNow,"depChart","json")},_options.depTimeout)}),console.log("Ryan RocketLoader - Loading dependencies for target "+_page)}();

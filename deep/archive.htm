@@ -1,0 +1,127 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Logan Edwards</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Archive <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Resources
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Public Blog</a>
+                  <a class="dropdown-item" href="#">...</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Website Security</a>
+                  <a class="dropdown-item" href="#">Admin Dashboard</a>
+                </div>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+      <div id="overlay">
+        <div id="ov-text">
+          Page Has Been Locked.
+          <br>
+          <span style="font-size: 28px;">
+            Page Protection by Ryan Wans
+          </span>
+        </div>
+      </div>
+
+      <div class="mainTarget" style="padding:20px;padding-top: 0!important;margin-left:10px!important;overflow-x: hidden;">
+        <div class="card-holder-ryanwans-end">
+          <div class="card-holder-inner-card hover">
+            <img src="/api/v1/getDeep?file=album_one.jpg" class="card-holder-image">
+            <div class="card-holder-preview">
+              <span class="pre-title">
+                Photo Album One
+              </span>
+              <span class="pre-desc">
+                Description of this album will go here and it can be two lines.
+              </span>
+            </div>
+          </div>
+          <div class="card-holder-inner-card hover">
+            <div class="card-holder-preview">
+              
+            </div>
+          </div><br>
+          <div class="card-holder-inner-card hover">
+            <div class="card-holder-preview">
+              
+            </div>
+          </div>
+          <div class="card-holder-inner-card hover">
+            <div class="card-holder-preview">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <r-pop class="rp" onclick="javascript:rocketCDN.fire('que_music');">
+        <style>
+          .rp {
+            position: fixed;
+            z-index: 500;
+            bottom:0;
+            right:0;
+            width: 24%;
+            height:10vw;
+            background-color: rgba(0, 0, 0, 0.534);
+            border-top-left-radius: 12px;
+            border-left: white 1px solid;
+            border-top: white 1px solid;
+            box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            min-width: 350px;
+            min-height: 110px;
+            text-align: left;
+            cursor: pointer;
+          }
+          .ctp {
+            color: white;
+            font-weight: 600;
+            text-decoration: underline;
+            font-size: 30px;
+            display: block;
+            margin-top: 5px;
+            margin-left: 10px;
+          }
+          .atp {
+            color: white;
+            font-weight: 600;
+            font-size: 24px;
+            display: block;
+            margin-top: 2px;
+            margin-left: 10px;
+          }
+          .ctp:hover{
+            font-style: italic;
+          }
+          .log {
+            color: rgb(145, 145, 145);
+            display: block;
+            font-size: 18px;
+            margin-top: 2px;
+            margin-left: 10px;
+            font-weight: 500;
+          }
+        </style>
+        <span class="ctp">
+          Click to play music
+        </span>
+        <span class="log">
+          Powered by Ryan Wans
+        </span>
+      </r-pop>
+</div>

@@ -1,0 +1,61 @@
+{
+    "/": {
+        "jQuery": true,
+        "locked": false,
+        "forceAccount": false,
+        "staffOnly": false,
+        "websocketEnabled": {
+            "go": false,
+            "minPing": 50,
+            "store": false
+        },
+        "name": "login",
+        "UMDATA": null,
+        "getter": "/api/v1/deepChart?request=",
+        "hotreplace_config": {
+            "useHotReplace": true,
+            "replaceUpon": "instant",
+            "lastModified": "_extrap",
+            "v": "v_4_0_1",
+            "hotArray": [
+                "Login to gain access to my site.",
+                "🔒 Secured by Ryan Wans",
+                "<a style='color:lightgray;font-style:none;text-decoration:none;' href='https://ryanwans.com/privacy'>Privacy Policy</a>"
+            ]
+        },
+        "pageFile": {
+            "has": true,
+            "cdn": "/api/v1/dep/type=rw_prod_ftype_jsuniversal",
+            "initWith": 1,
+            "execUpon": "cdnApproval"
+        }
+    },
+    "archive": {
+        "jQuery": true,
+        "locked": false,
+        "forceAccount": true,
+        "staffOnly": false,
+        "websocketEnabled": {
+            "go": false,
+            "minPing": 50,
+            "store": false
+        },
+        "name": "archive",
+        "UMDATA": null,
+        "getter": "/api/v1/deepChart?request=",
+        "hotreplace_config": {
+            "useHotReplace": true,
+            "replaceUpon": "instant",
+            "lastModified": "_extrap",
+            "v": "v_4_0_1",
+            "hotArray": [
+            ]
+        },
+        "pageFile": {
+            "has": true,
+            "cdn": "/api/v1/dep/type=rw_prod_ftype_jsuniversal",
+            "initWith": 1,
+            "execUpon": "cdnApproval"
+        }
+    }
+}
